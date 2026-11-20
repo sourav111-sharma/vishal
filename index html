@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics Made Easy - The Doppler Effect</title>
+    <!-- Tailwind CSS (CDN for simple hosting) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Custom JS -->
+    <script src="script.js" defer></script>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased overflow-x-hidden">
+
+    <!-- NAVIGATION -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-md shadow-sm z-50 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <i class="fa-solid fa-atom text-blue-600 text-2xl"></i>
+                    <span class="font-bold text-xl tracking-tight">Physics Made Easy</span>
+                </div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#intro" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Introduction</a>
+                    <a href="#concepts" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Basic Concepts</a>
+                    <a href="#simulation" class="text-gray-600 hover:text-blue-600 font-medium transition-colors">Simulation</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-gradient-to-b from-blue-50 to-white overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative text-center">
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight mb-6">
+                Understanding the <span class="text-gradient">Doppler Effect</span>
+            </h1>
+            <p class="mt-4 text-xl md:text-2xl text-gray-600 max-w-3xl mx-auto italic font-light mb-10">
+                "Why Does an Ambulance Sound Different When It Passes You?"
+            </p>
+            <a href="#intro" class="inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white bg-blue-600 hover:bg-blue-700 rounded-full shadow-lg hover:shadow-xl transition-all transform hover:-translate-y-1">
+                Start Learning <i class="fa-solid fa-arrow-right ml-2"></i>
+            </a>
+
+            <!-- Hero Animation -->
+            <div class="mt-20 relative h-32 w-full border-b-4 border-gray-800">
+                <div class="absolute bottom-0 w-full flex justify-center items-center pb-2">
+                    <i class="fa-solid fa-person text-4xl text-gray-700"></i>
+                </div>
+                <div class="absolute bottom-0 animate-drive flex items-center gap-2 pb-1">
+                    <i class="fa-solid fa-truck-medical text-5xl text-red-600"></i>
+                    <i class="fa-solid fa-volume-high text-xl text-blue-500 animate-pulse"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTRODUCTION -->
+    <section id="intro" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Have you ever noticed...</h2>
+            <p class="text-xl text-gray-700 leading-relaxed mb-12">
+                ...that an ambulance siren sounds different when it approaches you compared to when it moves away from you? 
+                When it comes toward you, the siren sounds <strong>high-pitched</strong> and frantic. The moment it passes and drives away, the pitch suddenly drops and sounds <strong>lower</strong>.
+            </p>
+            
+            <div class="grid md:grid-cols-2 gap-8 text-left">
+                <div class="bg-blue-50 p-8 rounded-2xl border border-blue-100 shadow-sm">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="bg-blue-600 text-white p-3 rounded-full">
+                            <i class="fa-solid fa-arrow-right-to-bracket text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Approaching Source</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">The sound waves are squished together.</p>
+                    <ul class="list-disc pl-5 text-gray-700 font-medium">
+                        <li>Higher Frequency</li>
+                        <li>Shorter Wavelength</li>
+                        <li>Higher Pitch (Sound)</li>
+                    </ul>
+                </div>
+                
+                <div class="bg-purple-50 p-8 rounded-2xl border border-purple-100 shadow-sm">
+                    <div class="flex items-center gap-4 mb-4">
+                        <div class="bg-purple-600 text-white p-3 rounded-full">
+                            <i class="fa-solid fa-arrow-right-from-bracket text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Receding Source</h3>
+                    </div>
+                    <p class="text-gray-600 mb-2">The sound waves are stretched apart.</p>
+                    <ul class="list-disc pl-5 text-gray-700 font-medium">
+                        <li>Lower Frequency</li>
+                        <li>Longer Wavelength</li>
+                        <li>Lower Pitch (Sound)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- BASIC CONCEPTS -->
+    <section id="concepts" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">The Building Blocks</h2>
+                <p class="text-lg text-gray-600">Let's understand the basic physics terms before diving into the effect.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Concept 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                    <i class="fa-solid fa-wave-square text-3xl text-blue-500 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Sound Waves</h3>
+                    <p class="text-gray-600 text-sm mb-4">Vibrations that travel through the air. They carry energy from the source to your ear.</p>
+                    <button onclick="toggleQuiz('quiz1')" class="text-sm font-bold text-blue-600 hover:underline">Knowledge Check <i class="fa-solid fa-chevron-down"></i></button>
+                    <div id="quiz1" class="hidden mt-4 p-3 bg-blue-50 rounded-lg text-sm">
+                        <p class="font-semibold mb-2">Can sound travel in space?</p>
+                        <button onclick="alert('Incorrect! Space is a vacuum, so there is no air for sound to travel through.')" class="bg-white border border-gray-300 px-3 py-1 rounded mr-2">Yes</button>
+                        <button onclick="alert('Correct! Sound needs a medium to travel.')" class="bg-white border border-gray-300 px-3 py-1 rounded">No</button>
+                    </div>
+                </div>
+
+                <!-- Concept 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                    <i class="fa-solid fa-chart-line text-3xl text-purple-500 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Frequency & Pitch</h3>
+                    <p class="text-gray-600 text-sm mb-4">How many waves hit your ear per second. High frequency = High pitch.</p>
+                    <button onclick="toggleQuiz('quiz2')" class="text-sm font-bold text-purple-600 hover:underline">Knowledge Check <i class="fa-solid fa-chevron-down"></i></button>
+                    <div id="quiz2" class="hidden mt-4 p-3 bg-purple-50 rounded-lg text-sm">
+                        <p class="font-semibold mb-2">If frequency increases, the pitch...</p>
+                        <button onclick="alert('Correct! Higher frequency means higher pitch.')" class="bg-white border border-gray-300 px-3 py-1 rounded mr-2">Goes Up</button>
+                        <button onclick="alert('Incorrect. Think of a fast-vibrating guitar string.')" class="bg-white border border-gray-300 px-3 py-1 rounded">Goes Down</button>
+                    </div>
+                </div>
+
+                <!-- Concept 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
+                    <i class="fa-solid fa-ruler-horizontal text-3xl text-green-500 mb-4"></i>
+                    <h3 class="text-xl font-bold mb-2">Wavelength</h3>
+                    <p class="text-gray-600 text-sm mb-4">The physical distance between the peaks of two consecutive waves.</p>
+                    <button onclick="toggleQuiz('quiz3')" class="text-sm font-bold text-green-600 hover:underline">Knowledge Check <i class="fa-solid fa-chevron-down"></i></button>
+                    <div id="quiz3" class="hidden mt-4 p-3 bg-green-50 rounded-lg text-sm">
+                        <p class="font-semibold mb-2">If waves are squished together, wavelength is...</p>
+                        <button onclick="alert('Correct! Squished waves mean less distance between them.')" class="bg-white border border-gray-300 px-3 py-1 rounded mr-2">Shorter</button>
+                        <button onclick="alert('Incorrect. Squished waves are closer together.')" class="bg-white border border-gray-300 px-3 py-1 rounded">Longer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE SIMULATION -->
+    <section id="simulation" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Interactive Virtual Classroom</h2>
+                <p class="text-gray-400">Play with the slider below to see how the speed of the ambulance changes the sound waves.</p>
+            </div>
+
+            <div class="bg-gray-800 rounded-2xl p-4 md:p-8 shadow-2xl border border-gray-700">
+                
+                <!-- Controls -->
+                <div class="flex flex-col md:flex-row justify-between items-center gap-6 mb-8 bg-gray-700 p-6 rounded-xl">
+                    <div class="w-full md:w-1/2">
+                        <label for="speedSlider" class="block text-sm font-medium mb-2">
+                            Speed of Ambulance: <span id="speedValue" class="text-blue-400 font-bold">Stationary</span>
+                        </label>
+                        <input type="range" id="speedSlider" min="0" max="8" step="0.5" value="0" class="w-full h-2 bg-gray-600 rounded-lg appearance-none cursor-pointer">
+                    </div>
+                    
+                    <div class="flex gap-4">
+                        <button id="btnPlay" class="px-6 py-2 bg-blue-600 hover:bg-blue-500 font-bold rounded-lg transition-colors">
+                            <i class="fa-solid fa-play mr-2"></i> Play
+                        </button>
+                        <button id="btnReset" class="px-6 py-2 bg-gray-600 hover:bg-gray-500 font-bold rounded-lg transition-colors">
+                            <i class="fa-solid fa-rotate-right mr-2"></i> Reset
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Canvas Container -->
+                <div class="relative w-full aspect-video bg-black rounded-xl overflow-hidden border border-gray-600">
+                    <canvas id="dopplerCanvas" class="absolute top-0 left-0 w-full h-full"></canvas>
+                    <div class="absolute top-4 left-4 bg-black/60 px-3 py-1 rounded text-sm text-gray-300">
+                        Observer <i class="fa-solid fa-person text-blue-400 ml-1"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 border-t border-gray-800 py-10 text-center text-gray-500 font-medium">
+        <i class="fa-solid fa-atom text-blue-500 mr-2"></i> Physics Made Easy © 2026. Built for interactive learning.
+    </footer>
+</body>
+</html>
