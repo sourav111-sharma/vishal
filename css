@@ -1,0 +1,24 @@
+/* Core CSS Customizations */
+
+/* Ambulance Driving Animation */
+@keyframes drive {
+    0% { transform: translateX(-100vw); }
+    100% { transform: translateX(100vw); }
+}
+
+.animate-drive {
+    animation: drive 6s linear infinite;
+}
+
+/* Sound Wave Pulse */
+.pulse-wave {
+    animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+/* Text Gradient Utilities */
+.text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right, #3b82f6, #8b5cf6);
+}
